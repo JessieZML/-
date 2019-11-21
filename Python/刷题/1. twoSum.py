@@ -25,12 +25,20 @@ result = A.get("c")
 
 # 字典记录了 num1 和 num2 的值和位置，而省了再查找 num2 索引的步骤
 # 通过哈希来求解，这里通过字典来模拟哈希查询的过程
-def twoSum(nums, target):
-    hashmap={}
-    for ind,num in enumerate(nums):
-        hashmap[num] = ind
-    for i,num in enumerate(nums):
-        j = hashmap.get(target - num)
-        if j is not None and i!=j:
-            return [i,j]
+# 只能找到最后一组满足条件的两个值
+class solution(object):
+    def twoSum(self, nums, target):
 
+        hashmap={}
+
+        for ind,num in enumerate(nums):
+            hashmap[num] = ind
+
+        for i,num in enumerate(nums):
+            j = hashmap.get(target - num)
+            if j is not None and i<j:
+                return [i,j]
+
+if __name__ == '__main__':
+    s = solution()
+    print(s.twoSum([2, 3, 5, 8, 0], 8)
