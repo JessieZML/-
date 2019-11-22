@@ -19,7 +19,12 @@ A = {"a":1, "b":2}
 如果取A["c"]则会报错
 此时如果想在函数内部进行判断的话，可以使用
 result = A.get("c")
-避免报错
+
+字典的get方法：
+    D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.
+
+如果k在D中，则返回D[k]，否则默认返回None。当设置了d时，返回d
+
 """      
 
 
