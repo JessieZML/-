@@ -1,3 +1,18 @@
+"""
+一些设置
+"""
+sns.set_style("darkgrid")
+# 显示中文
+plt.rcParams["font.family"] = "SimHei"
+# 正常显示字符
+plt.rcParams["axes.unicode_minus"]
+# 设置线条样式
+plt.rcParams["font.size"] = 15
+
+
+"""
+流量计画图相关
+"""
 class MatplotlibPlot()：
     """ 工作中常用的matplotlib画图代码"""
     
