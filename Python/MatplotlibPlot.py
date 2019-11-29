@@ -12,6 +12,7 @@ plt.rcParams["font.size"] = 15
 
 """
 子图设置
+防止subplot的子标题会和上一行的x轴重合，可以使用GridSpec
 """
 # 超越常规网格到跨越多行和列的子图plt.GridSpec()是最好的工具。
 # 该plt.GridSpec()对象本身不会创建一个图; 
