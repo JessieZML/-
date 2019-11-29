@@ -11,6 +11,23 @@ plt.rcParams["font.size"] = 15
 
 
 """
+子图设置
+"""
+# 超越常规网格到跨越多行和列的子图plt.GridSpec()是最好的工具。
+# 该plt.GridSpec()对象本身不会创建一个图; 
+# 它只是一个方便的界面，可以被plt.subplot()命令识别。
+# 例如，具有一些指定宽度和高度空间的两行和三列网格的gridspec：
+
+grid = plt.GridSpec(2, 3, wspace=0.4, hspace=0.3)
+# 从这里我们可以使用familiary Python切片语法指定子图位置和范围：
+
+plt.subplot(grid[0, 0])
+plt.subplot(grid[0, 1:])
+plt.subplot(grid[1, :2])
+plt.subplot(grid[1, 2]);
+
+
+"""
 流量计画图相关
 """
 class MatplotlibPlot()：
