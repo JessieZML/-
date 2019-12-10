@@ -11,6 +11,13 @@ plt.rcParams["font.size"] = 15
 
 
 """
+忽略警告
+"""
+import warnings
+warnings.filterwarnings('ignore')
+
+
+"""
 子图设置
 防止subplot的子标题会和上一行的x轴重合，可以使用GridSpec
 """
